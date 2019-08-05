@@ -7,8 +7,21 @@
     "build": "babel src -o lib/nowait.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knowledgecode/nowait.git"
+  },
+  "keywords": [
+    "setImmediate",
+    "setTimeout",
+    "async"
+  ],
   "author": "KNOWLEDGECODE",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knowledgecode/nowait/issues"
+  },
+  "homepage": "https://github.com/knowledgecode/nowait",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
