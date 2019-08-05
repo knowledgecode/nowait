@@ -1,5 +1,5 @@
 {
-  "name": "nowait",
+  "name": "@knowledgecode/nowait",
   "version": "0.1.0",
   "description": "The minimal setImmediate() for browser",
   "main": "src/index.js",
