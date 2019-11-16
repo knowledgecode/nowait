@@ -1,10 +1,10 @@
 {
   "name": "@knowledgecode/nowait",
-  "version": "0.1.2",
-  "description": "The minimal setImmediate() for browser",
-  "main": "src/index.js",
+  "version": "0.2.0",
+  "description": "A better async function than the setTimeout(..., 0) for the browser",
+  "main": "nowait.js",
   "scripts": {
-    "build": "babel src -o lib/nowait.js",
+    "minify": "terser -c -m --ecma 5 -o dist/nowait.min.js --comments some nowait.js && terser -c -m --module -o dist/nowait.es.min.js --comments some nowait.es.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,8 +23,6 @@
   },
   "homepage": "https://github.com/knowledgecode/nowait",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5"
+    "terser": "^4.3.9"
   }
 }
