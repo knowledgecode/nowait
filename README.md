@@ -1,2 +1,2 @@
 # nowait
-The minimal setImmediate() for browser
+A better async function than the setTimeout(..., 0) for the browser
