@@ -2,20 +2,18 @@
  * @preserve nowait (c) KNOWLEDGECODE | MIT
  */
 
-self.nowait = queueMicrotask || setImmediate || (function () {
+(function (global) {
     'use strict';
 
-    if (Promise) {
+    global.nowait = queueMicrotask || setImmediate || (function () {
+        if (Promise) {
+            return function (fn) {
+                Promise.resolve().then(fn);
+            };
+        }
         return function (fn) {
-            Promise.resolve().then(fn);
+            setTimeout(fn, 0);
         };
-    }
-    if (requestAnimationFrame) {
-        return function (fn) {
-            requestAnimationFrame(fn);
-        };
-    }
-    return function (fn) {
-        setTimeout(fn, 0);
-    };
-}());
+    }());
+
+}(this));
